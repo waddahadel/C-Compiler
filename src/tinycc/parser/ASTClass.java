@@ -2,7 +2,6 @@ package tinycc.parser;
 
 import java.util.List;
 
-import mars.venus.editors.jeditsyntax.InputHandler.next_char;
 import tinycc.diagnostic.Locatable;
 import tinycc.implementation.expression.BinaryExpression;
 import tinycc.implementation.expression.Expression;

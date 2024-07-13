@@ -1,14 +1,12 @@
 package tinycc.implementation.expression;
 
-import mars.assembler.Token;
-
 public class BinaryExpression extends Expression {
 
-    Token operator;
+    tinycc.parser.Token operator;
     Expression left;
     Expression right;
 
-    public BinaryExpression(tinycc.parser.Token operator2, Expression left, Expression right) {
+    public BinaryExpression(tinycc.parser.Token operator, Expression left, Expression right) {
         this.operator = operator;
         this.left = left;
         this.right = right;
