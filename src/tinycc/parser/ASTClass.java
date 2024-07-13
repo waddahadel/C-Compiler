@@ -2,7 +2,9 @@ package tinycc.parser;
 
 import java.util.List;
 
+import mars.venus.editors.jeditsyntax.InputHandler.next_char;
 import tinycc.diagnostic.Locatable;
+import tinycc.implementation.expression.BinaryExpression;
 import tinycc.implementation.expression.Expression;
 import tinycc.implementation.statement.Statement;
 import tinycc.implementation.type.BaseType;
@@ -100,8 +102,7 @@ public class ASTClass implements ASTFactory {
 
     @Override
     public Expression createBinaryExpression(Token operator, Expression left, Expression right) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createBinaryExpression'");
+        return new BinaryExpression(operator, left, right);
     }
 
     @Override
