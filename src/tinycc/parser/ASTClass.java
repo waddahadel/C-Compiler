@@ -18,6 +18,17 @@ public class ASTClass implements ASTFactory {
     }
 
     @Override
+    public Statement createBreakStatement(Locatable loc) {
+        throw new UnsupportedOperationException("Break statement not implemented!");
+    }
+
+    @Override
+
+    public Statement createContinueStatement(Locatable loc) {
+        throw new UnsupportedOperationException("Continue statement not implemented!");
+    }
+
+    @Override
     public Statement createDeclarationStatement(Type type, Token name, Expression init) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'createDeclarationStatement'");
@@ -46,6 +57,23 @@ public class ASTClass implements ASTFactory {
     public Statement createWhileStatement(Locatable loc, Expression condition, Statement body) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'createWhileStatement'");
+    }
+
+    @Override
+    public Statement createAnnotatedWhileStatement(
+            Locatable loc, Expression condition, Statement body,
+            Expression invariant, Expression term, Token loopBound) {
+        throw new UnsupportedOperationException("Annotated while statement not implemented!");
+    }
+
+    @Override
+    public Statement createAssumeStatement(Locatable loc, Expression condition) {
+        throw new UnsupportedOperationException("Assume statement not implemented!");
+    }
+
+    @Override
+    public Statement createAssertStatement(Locatable loc, Expression condition) {
+        throw new UnsupportedOperationException("Assert statement not implemented!");
     }
 
     // ---------- Types --------------
@@ -80,6 +108,12 @@ public class ASTClass implements ASTFactory {
     public Expression createCallExpression(Token token, Expression callee, List<Expression> arguments) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'createCallExpression'");
+    }
+
+    @Override
+    public Expression createConditionalExpression(Token token, Expression condition, Expression consequence,
+            Expression alternative) {
+        throw new UnsupportedOperationException("Conditional expression not implemented!");
     }
 
     @Override
