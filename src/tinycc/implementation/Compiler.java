@@ -1,6 +1,7 @@
 package tinycc.implementation;
 
 import tinycc.diagnostic.Diagnostic;
+import tinycc.parser.ASTClass;
 import tinycc.parser.ASTFactory;
 import tinycc.parser.Lexer;
 import tinycc.parser.Parser;
@@ -36,7 +37,7 @@ public class Compiler {
 	 * @see ASTFactory
 	 */
 	public ASTFactory getASTFactory() {
-		throw new UnsupportedOperationException("TODO: implement this");
+		return new ASTClass();
 	}
 
 	/**

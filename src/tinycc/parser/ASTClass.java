@@ -48,6 +48,8 @@ public class ASTClass implements ASTFactory {
         throw new UnsupportedOperationException("Unimplemented method 'createWhileStatement'");
     }
 
+    // ---------- Types --------------
+
     @Override
     public Type createFunctionType(Type returnType, List<Type> parameters) {
         // TODO Auto-generated method stub
@@ -65,6 +67,8 @@ public class ASTClass implements ASTFactory {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'createBaseType'");
     }
+
+    // -------------- Expressions -------------
 
     @Override
     public Expression createBinaryExpression(Token operator, Expression left, Expression right) {
