@@ -6,7 +6,6 @@ public class FunctionType extends Type {
 
     Type returnType;
     List<Type> parameters;
-    String parameters_to_strings = "";
 
     public FunctionType(Type returnType, List<Type> parameters) {
         this.returnType = returnType;
@@ -15,13 +14,19 @@ public class FunctionType extends Type {
 
     @Override
     public String toString() {
-        String returnType_String = returnType.toString();
+        String returnTypeString = returnType.toString();
+        StringBuilder parametersToString = new StringBuilder();
 
-        for (Type param_type : parameters) {
-            String.format(parameters_to_strings + ", ", param_type.toString());
+        if (parameters != null && !parameters.isEmpty()) {
+            for (Type paramType : parameters) {
+                if (parametersToString.length() > 0) {
+                    parametersToString.append(" , ");
+                }
+                parametersToString.append(paramType.toString());
+            }
+            return "FunctionType [ " + returnTypeString + " , " + parametersToString.toString() + " ]";
+        } else {
+            return "FunctionType [ " + returnTypeString + " ]";
         }
-
-        return "FunctionType[" + returnType_String + parameters_to_strings + "]";
     }
-
 }
