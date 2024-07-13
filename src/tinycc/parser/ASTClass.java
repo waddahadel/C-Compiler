@@ -5,6 +5,7 @@ import java.util.List;
 import tinycc.diagnostic.Locatable;
 import tinycc.implementation.expression.Expression;
 import tinycc.implementation.statement.Statement;
+import tinycc.implementation.type.BaseType;
 import tinycc.implementation.type.Type;
 
 public class ASTClass implements ASTFactory {
@@ -92,8 +93,7 @@ public class ASTClass implements ASTFactory {
 
     @Override
     public Type createBaseType(TokenKind kind) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createBaseType'");
+        return new BaseType(kind);
     }
 
     // -------------- Expressions -------------
