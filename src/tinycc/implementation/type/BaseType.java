@@ -7,7 +7,7 @@ public class BaseType extends Type {
     TokenKind type;
 
     public BaseType(TokenKind type) {
-        type = this.type;
+        this.type = type;
     }
 
     @Override
