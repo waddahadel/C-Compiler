@@ -6,6 +6,7 @@ import tinycc.diagnostic.Locatable;
 import tinycc.implementation.expression.Expression;
 import tinycc.implementation.statement.Statement;
 import tinycc.implementation.type.BaseType;
+import tinycc.implementation.type.FunctionType;
 import tinycc.implementation.type.PointerType;
 import tinycc.implementation.type.Type;
 
@@ -82,8 +83,7 @@ public class ASTClass implements ASTFactory {
 
     @Override
     public Type createFunctionType(Type returnType, List<Type> parameters) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createFunctionType'");
+        return new FunctionType(returnType, parameters);
     }
 
     @Override

@@ -1,7 +1,5 @@
 package tinycc.implementation.type;
 
-import tinycc.parser.*;;
-
 public class PointerType extends Type {
 
     Type type;
