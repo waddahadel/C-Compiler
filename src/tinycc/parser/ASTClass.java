@@ -6,6 +6,7 @@ import tinycc.diagnostic.Locatable;
 import tinycc.implementation.expression.BinaryExpression;
 import tinycc.implementation.expression.Expression;
 import tinycc.implementation.expression.PrimaryExpression;
+import tinycc.implementation.expression.UnaryExpression;
 import tinycc.implementation.statement.Statement;
 import tinycc.implementation.type.BaseType;
 import tinycc.implementation.type.FunctionType;
@@ -119,8 +120,7 @@ public class ASTClass implements ASTFactory {
 
     @Override
     public Expression createUnaryExpression(Token operator, boolean postfix, Expression operand) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createUnaryExpression'");
+        return new UnaryExpression(operator, postfix, operand);
     }
 
     @Override
