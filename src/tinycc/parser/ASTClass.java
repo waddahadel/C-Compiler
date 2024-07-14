@@ -42,8 +42,7 @@ public class ASTClass implements ASTFactory {
     @Override
     public Statement createIfStatement(Locatable loc, Expression condition, Statement consequence,
             Statement alternative) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createIfStatement'");
+        return new IfStatement(loc, condition, consequence, alternative);
     }
 
     @Override
