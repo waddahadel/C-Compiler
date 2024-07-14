@@ -5,6 +5,7 @@ import java.util.List;
 import tinycc.diagnostic.Locatable;
 import tinycc.implementation.expression.BinaryExpression;
 import tinycc.implementation.expression.Expression;
+import tinycc.implementation.expression.PrimaryExpression;
 import tinycc.implementation.statement.Statement;
 import tinycc.implementation.type.BaseType;
 import tinycc.implementation.type.FunctionType;
@@ -124,8 +125,7 @@ public class ASTClass implements ASTFactory {
 
     @Override
     public Expression createPrimaryExpression(Token token) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createPrimaryExpression'");
+        return new PrimaryExpression(token);
     }
 
     @Override
