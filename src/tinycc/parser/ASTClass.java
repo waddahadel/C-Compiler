@@ -14,8 +14,7 @@ public class ASTClass implements ASTFactory {
 
     @Override
     public Statement createBlockStatement(Locatable loc, List<Statement> statements) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createBlockStatement'");
+        return new BlockStatement(loc, statements);
     }
 
     @Override
@@ -52,8 +51,7 @@ public class ASTClass implements ASTFactory {
 
     @Override
     public Statement createWhileStatement(Locatable loc, Expression condition, Statement body) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createWhileStatement'");
+        return new WhileStatement(loc, condition, body);
     }
 
     @Override

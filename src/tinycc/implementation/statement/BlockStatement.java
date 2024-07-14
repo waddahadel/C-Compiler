@@ -16,8 +16,20 @@ public class BlockStatement extends Statement {
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'toString'");
+
+        StringBuilder statementsToString = new StringBuilder();
+
+        if (statements != null && !statements.isEmpty()) {
+            for (Statement statement : statements) {
+                if (statementsToString.length() > 0) {
+                    statementsToString.append(" , ");
+                }
+                statementsToString.append(statement.toString());
+            }
+            return "Block [ " + statementsToString + " ]";
+        } else {
+            return "Block [ ]";
+        }
     }
 
 }
