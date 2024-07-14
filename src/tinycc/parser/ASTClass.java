@@ -31,8 +31,7 @@ public class ASTClass implements ASTFactory {
 
     @Override
     public Statement createDeclarationStatement(Type type, Token name, Expression init) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createDeclarationStatement'");
+        return new DeclarationStatement(type, name, init);
     }
 
     @Override
