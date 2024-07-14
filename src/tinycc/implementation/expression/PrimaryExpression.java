@@ -13,6 +13,8 @@ public class PrimaryExpression extends Expression {
     @Override
     public String toString() {
         switch (token.getKind()) {
+            case IDENTIFIER:
+                return "Var_" + token.toString();
             case CHARACTER:
                 return "Const_" + token.toString();
             case NUMBER:

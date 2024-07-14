@@ -100,8 +100,7 @@ public class ASTClass implements ASTFactory {
 
     @Override
     public Expression createCallExpression(Token token, Expression callee, List<Expression> arguments) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createCallExpression'");
+        return new FunctionCallExpression(token, callee, arguments);
     }
 
     @Override
