@@ -1,5 +1,6 @@
 package tinycc.parser;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import tinycc.diagnostic.Locatable;
@@ -9,6 +10,10 @@ import tinycc.implementation.statement.*;
 import tinycc.implementation.type.*;
 
 public class ASTClass implements ASTFactory {
+
+    // ------- Collection of high level declarations--------
+
+    ArrayList<Statement> externalDeclaraions = new ArrayList<>();
 
     // ------------------Statements----------------
 
@@ -118,8 +123,8 @@ public class ASTClass implements ASTFactory {
 
     @Override
     public void createExternalDeclaration(Type type, Token name) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createExternalDeclaration'");
+        Statement declarationStatement = createDeclarationStatement(type, name, null);
+        externalDeclaraions.add(declarationStatement);
     }
 
     @Override
