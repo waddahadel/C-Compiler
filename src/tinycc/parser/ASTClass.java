@@ -36,8 +36,7 @@ public class ASTClass implements ASTFactory {
 
     @Override
     public Statement createExpressionStatement(Locatable loc, Expression expression) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createExpressionStatement'");
+        return new ExpressionStatement(loc, expression);
     }
 
     @Override
