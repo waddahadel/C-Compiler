@@ -28,9 +28,9 @@ public class FunctionCallExpression extends Expression {
                 }
                 argumentsToString.append(argument.toString());
             }
-            return "Call [ " + token.toString() + " , " + argumentsToString + " ]";
+            return "Call [ " + callee.toString() + " , " + argumentsToString + " ]";
         } else {
-            return "Call [ " + token.toString() + " ]";
+            return "Call [ " + callee.toString() + " ]";
         }
     }
 

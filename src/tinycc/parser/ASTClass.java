@@ -129,8 +129,7 @@ public class ASTClass implements ASTFactory {
 
     @Override
     public void createFunctionDefinition(Type type, Token name, List<Token> parameterNames, Statement body) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createFunctionDefinition'");
+        createExternalDeclaration(type, name);
     }
 
 }
