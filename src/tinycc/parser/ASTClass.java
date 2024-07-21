@@ -13,7 +13,7 @@ public class ASTClass implements ASTFactory {
 
     // ------- Collection of high level declarations--------
 
-    ArrayList<Statement> externalDeclaraions = new ArrayList<>();
+    public ArrayList<Statement> externalDeclaraions = new ArrayList<>();
 
     // ------------------Statements----------------
 
